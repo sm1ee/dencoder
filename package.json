@@ -1,0 +1,11 @@
+{
+  "name": "dencoder",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Chrome extension for common encoding and decoding workflows.",
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "package": "./scripts/package-release.sh"
+  }
+}
