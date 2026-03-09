@@ -1,92 +1,111 @@
 # Chrome Web Store Submission
 
-This file captures the reviewer-facing information needed to submit `dencoder` to the Chrome Web Store.
+This document contains the final copy and checklist for publishing `dencoder` to the Chrome Web Store.
 
-## Why this file exists
+## Store Listing
 
-Chrome's publishing and privacy guidance requires:
+Use these values in the Chrome Web Store dashboard.
 
-- a clear single purpose
-- minimum necessary permissions
-- no remotely hosted executable code
-- a ZIP upload with `manifest.json` at the root
-- accurate Store Listing and Privacy answers
+### Name
 
-## Current codebase status
+`dencoder`
 
-- Manifest V3: yes
-- ZIP packaging script: yes, run `npm run package`
-- Remote hosted executable code: none intended
-- Permissions currently requested: `clipboardWrite`
-- Homepage URL set in manifest: yes
-- Extension icons present: yes
-- Screenshots for store listing: still needed manually
+### Category
 
-## Single purpose
+`Developer Tools`
 
-Suggested Chrome Web Store single purpose text:
+### Language
 
-`dencoder is an offline developer toolbox for hashing, encoding, decoding, payload inspection, and related text or network conversions.`
+`English (United States)`
 
-This is intentionally narrower than "all-in-one security tool" wording and aligns better with Chrome's single-purpose guidance.
+### Short description
 
-## Permissions justification
+`Developer Chrome extension for hashing, encoding, ciphers, JWT, JSON, networking, and conversion tools.`
 
-Use this in the Privacy tab:
+### Detailed description
 
-- `clipboardWrite`: Allows the extension to copy generated output to the clipboard only when the user explicitly clicks a result.
+`dencoder is a local-first Chrome extension for developers who need quick conversion and inspection tools without leaving the browser. It includes hashes, HMAC, CRC, text encoders and decoders, ciphers, JWT inspection, JSON formatting, Morse conversion, IP and subnet helpers, time and number conversions, and password strength analysis. All processing happens locally inside the extension popup or tab view.`
 
-## Remote code declaration
+### Website
 
-Use this in the Privacy tab:
+`https://github.com/sm1ee/dencoder`
 
-`No, I am not using remote code. All executable code is bundled inside the extension package.`
+### Support URL
 
-## Data usage disclosure
+`https://github.com/sm1ee/dencoder/issues`
 
-Use this in the Privacy tab if behavior remains unchanged:
+### Default locale keywords / topics
 
-- Collected data: none
-- Sold data: no
-- Used for authentication: no
-- Used for advertising: no
-- Used for personalization: no
-- Used for analytics: no
-- User text is processed locally in the browser only
+`chrome extension developer tools hashing encoding decoding jwt json cryptography cipher converter`
 
-## Privacy policy
+## Privacy Tab
 
-Draft policy text lives in [docs/PRIVACY_POLICY.md](/Users/bugclaw/.openclaw/workspace/dencoder/docs/PRIVACY_POLICY.md).
+Use the following answers if the extension behavior stays unchanged.
 
-Before submitting:
+### Single purpose
 
-1. Host the privacy policy on a public HTTPS URL.
-2. Paste that URL into the Developer Dashboard privacy policy field.
-3. Ensure the hosted policy matches the privacy disclosures exactly.
+`dencoder is a local-only developer toolbox for hashes, encodings, ciphers, JWT, JSON, networking, and data conversions.`
 
-## Store listing copy
+### Permission justification
 
-Suggested short description:
+- `clipboardWrite`: Lets the user copy generated output from the extension.
 
-`Offline developer toolbox for hashes, encoding, JWT/JSON inspection, and network or text conversions.`
+### Remote code
 
-Suggested longer description:
+`No. All executable code is packaged inside the extension bundle.`
 
-`dencoder is a local-first Chrome extension for common developer conversions and payload inspection. It provides hashes, HMAC, CRC, ciphers, Base64/Base32/Base45/Base58 helpers, JWT and JSON tools, Morse conversion, IP/network calculations, time and number conversions, and password strength analysis. All processing runs locally in the browser.`
+### User data collection
 
-## Manual submission checklist
+- Collected data: `None`
+- Sold data: `No`
+- Used for authentication: `No`
+- Used for advertising: `No`
+- Used for personalization: `No`
+- Used for analytics: `No`
+- User-entered content is processed locally in the browser only
 
-1. Run `npm test`
-2. Run `npm run package`
-3. Upload `dist/dencoder-<version>.zip`
-4. Fill out Store Listing fields with accurate title, description, category, support URL, and screenshots
-5. Fill out Privacy fields using the text above
-6. Add the hosted privacy policy URL
-7. Confirm that screenshots and listing text match actual behavior
-8. Submit for review
+### Privacy policy URL
 
-## Notes for future updates
+Host [privacy-policy.html](/Users/bugclaw/.openclaw/workspace/dencoder/docs/privacy-policy.html#L1) on a public HTTPS URL and paste that URL into the dashboard.
 
-- Increase the manifest `version` before every upload
-- Keep permissions minimal; if a permission is not essential, remove it before release
-- Re-check the packaged artifact for remote URLs if new dependencies are added
+The markdown source version is [PRIVACY_POLICY.md](/Users/bugclaw/.openclaw/workspace/dencoder/docs/PRIVACY_POLICY.md#L1).
+
+## Test Instructions
+
+Paste this into the `Test instructions` field.
+
+`No login is required. Open the extension popup from the Chrome toolbar. Switch between tabs such as Hash, Encode, JWT, JSON, and Net, then enter sample text to verify results update immediately. Click Open Tab to verify the larger tab view. Open About to verify project information and source links.`
+
+## Store Assets
+
+Prepared assets:
+
+- Small promo tile: [small-promo-tile-440x280.png](/Users/bugclaw/.openclaw/workspace/dencoder/store-assets/small-promo-tile-440x280.png)
+- Popup screenshot: [screenshot-popup-hash-1280x800.png](/Users/bugclaw/.openclaw/workspace/dencoder/store-assets/screenshot-popup-hash-1280x800.png)
+- Tab screenshot: [screenshot-tab-jwt-1280x800.png](/Users/bugclaw/.openclaw/workspace/dencoder/store-assets/screenshot-tab-jwt-1280x800.png)
+- About screenshot: [screenshot-about-1280x800.png](/Users/bugclaw/.openclaw/workspace/dencoder/store-assets/screenshot-about-1280x800.png)
+
+Extension icon files:
+
+- [icon16.png](/Users/bugclaw/.openclaw/workspace/dencoder/images/icon16.png)
+- [icon32.png](/Users/bugclaw/.openclaw/workspace/dencoder/images/icon32.png)
+- [icon48.png](/Users/bugclaw/.openclaw/workspace/dencoder/images/icon48.png)
+- [icon128.png](/Users/bugclaw/.openclaw/workspace/dencoder/images/icon128.png)
+
+## Submission Checklist
+
+1. Confirm the repository metadata is correct in GitHub.
+2. Publish [privacy-policy.html](/Users/bugclaw/.openclaw/workspace/dencoder/docs/privacy-policy.html#L1) at a public HTTPS URL.
+3. Run `npm test`.
+4. Run `npm run package`.
+5. Upload [dist/dencoder-0.1.0.zip](/Users/bugclaw/.openclaw/workspace/dencoder/dist/dencoder-0.1.0.zip).
+6. Fill Store Listing fields with the copy above.
+7. Upload the prepared screenshots and promo tile.
+8. Fill Privacy answers with the values above.
+9. Submit for review.
+
+## Notes
+
+- Increase `manifest.json` version before each new store upload.
+- Keep permissions minimal. If a permission is not essential, remove it before release.
+- Rebuild the ZIP after any icon, manifest, or UI change.
