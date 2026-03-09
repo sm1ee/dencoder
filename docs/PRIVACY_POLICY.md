@@ -1,6 +1,6 @@
 # dencoder Privacy Policy
 
-Last updated: 2026-03-08
+Last updated: 2026-03-09
 
 `dencoder` processes developer input locally inside the extension popup or extension tab.
 
@@ -16,7 +16,7 @@ Last updated: 2026-03-08
 
 ## Permissions
 
-- `clipboardWrite`: used only when the user clicks a generated result or otherwise triggers a copy action.
+- `clipboardWrite`: used only when the user copies generated output from the extension.
 
 ## Storage
 
@@ -31,3 +31,5 @@ Last updated: 2026-03-08
 Project page: [https://github.com/sm1ee/dencoder](https://github.com/sm1ee/dencoder)
 
 Before Chrome Web Store submission, publish this policy at a public HTTPS URL and use that URL in the Developer Dashboard privacy policy field.
+
+A ready-to-host HTML version is available at [privacy-policy.html](/Users/bugclaw/.openclaw/workspace/dencoder/docs/privacy-policy.html#L1).
