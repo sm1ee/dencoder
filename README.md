@@ -1,5 +1,7 @@
 # dencoder
 
+https://chromewebstore.google.com/detail/dencoder/kadcopapjoiglkbomjikiefgmhfhkbgm
+
 `dencoder` is a Chrome extension for developers who need quick encoding, decoding, hashing, cipher, JWT, JSON, networking, and conversion tools in one place.
 
 Everything runs locally inside the extension. Your input is processed in the popup or tab view and is not sent to any external service.
